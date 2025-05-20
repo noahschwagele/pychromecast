@@ -4,7 +4,7 @@ Controller to interface with the DashCast app namespace.
 
 from __future__ import annotations
 
-from ..config import APP_DASHCAST
+from ..config import APP_SPORTYAPP
 from ..generated.cast_channel_pb2 import (  # pylint: disable=no-name-in-module
     CastMessage,
 )
@@ -12,14 +12,14 @@ from ..response_handler import chain_on_success
 from . import CallbackType, BaseController
 
 
-APP_NAMESPACE = "urn:x-cast:com.madmod.dashcast"
+APP_NAMESPACE = "urn:x-cast:com.sportyapp.cast"
 
 
 class DashCastController(BaseController):
     """Controller to interact with DashCast app namespace."""
 
     def __init__(
-        self, appNamespace: str = APP_NAMESPACE, appId: str = APP_DASHCAST
+        self, appNamespace: str = APP_NAMESPACE, appId: str = APP_SPORTYAPP
     ) -> None:
         super().__init__(appNamespace, appId)
 
